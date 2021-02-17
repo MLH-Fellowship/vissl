@@ -9,6 +9,7 @@ from fairscale.nn.data_parallel import ShardedDataParallel
 from vissl.trainer.train_task import SelfSupervisionTask
 from vissl.utils.hydra_config import AttrDict
 
+
 # More information on ShardedDDP can be found in the Fairscale repository
 # https://github.com/facebookresearch/fairscale
 

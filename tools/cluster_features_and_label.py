@@ -20,7 +20,7 @@ from vissl.utils.env import set_env_vars
 from vissl.utils.hydra_config import AttrDict, convert_to_attrdict, is_hydra_available
 from vissl.utils.io import save_file
 from vissl.utils.logger import setup_logging, shutdown_logging
-from vissl.utils.misc import merge_features, set_seeds, is_faiss_available
+from vissl.utils.misc import is_faiss_available, merge_features, set_seeds
 
 
 def get_data_features_and_images(cfg: AttrDict):
