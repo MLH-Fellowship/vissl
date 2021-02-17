@@ -5,8 +5,8 @@ import logging
 from classy_vision.generic.distributed_util import (
     get_cuda_device_index,
     is_distributed_training_run,
+    is_primary,
 )
-from classy_vision.generic.distributed_util import is_primary
 from classy_vision.tasks import register_task
 from fairscale.nn.data_parallel import FullyShardedDataParallel as FSDP
 from vissl.models.heads.swav_prototypes_head import SwAVPrototypesHead
