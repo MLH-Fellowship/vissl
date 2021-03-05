@@ -1,5 +1,6 @@
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 
+import io
 import logging
 import pprint
 import sys
@@ -86,6 +87,13 @@ class AttrDict(dict):
         return self.keys()
 
 
+def save_attrdict_to_disk(cfg, filename="train_config.yaml"):
+    from vissl.utils.checkpoint import get_checkpoint_folder
+
+    get_checkpoint_folder(cfg)
+    io.save_file(cfg, filename)
+
+
 def convert_to_attrdict(cfg: DictConfig, cmdline_args: List[Any] = None):
     """
     Given the user input Hydra Config, and some command line input options
@@ -116,6 +124,7 @@ def convert_to_attrdict(cfg: DictConfig, cmdline_args: List[Any] = None):
 
     # assert the config and infer
     config = cfg.config
+    save_attrdict_to_disk(cfg)
     assert_hydra_conf(config)
     return cfg, config
 
