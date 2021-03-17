@@ -4,6 +4,9 @@
 __pycache__/
 *.py[cod]
 
+# editor
+*.swp
+
 # C extensions
 *.so
 
@@ -89,3 +92,4 @@ website/pages/tutorials/*
 *-checkpoint.ipynb
 **/.ipynb_checkpoints
 **/.ipynb_checkpoints/**
+train_config.yaml
